@@ -36,14 +36,6 @@ const config = {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   dialect: 'postgres',
-  dialectOptions: {
-    // remove if you dont have a pem file config
-    ssl: {
-      require: true,
-      rejectUnauthorized: true,
-      ca: fs.readFileSync(path.join(__dirname, 'ca.pem')).toString(),
-    },
-  },
 };
 
 // Initialize Sequelize with the configuration
